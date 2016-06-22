@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>DevOps</h1>
+		<p>Qu'est-ce qu'un DevOps et comment Ansible peut aider... </p>
+	</header>
+	<section class="slide">
+		<h2>DevOps</h2>
+		<p>Où comment fludifier l'exploitation d'un environnement de production</p>
+	</section>
+	<section class="slide">
+		<h2>Rôle</h2>
+		<div>
+			<div style="float:left;width:50%">
+				<strong>Développeur</strong>
+				<ul>
+					<li>Produire un WAR applicatif</li>
+					<li>Produire un <code>.egg</code></li>
+					<li>Produire un RPM</li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%">
+				<strong>Opérationnel</strong>
+				<ul>
+					<li>Déployer le WAR dans Tomcat</li>
+					<li>Installer le <code>.egg</code> avec <code>pip</code></li>
+					<li>Installer le RPM avec <code>yum</code></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Résponsabilité</h2>
+		<pre>
+			<code><mark>java.lang.OutOfMemoryError: Java heap space</mark></code>
+			<code>    at java.nio.HeapIntBuffer.&lt;init&gt;(Unknown Source)</code>
+			<code>    at java.nio.IntBuffer.allocate(Unknown Source)</code>
+			<code>    ...</code>
+		</pre>
+		<div>
+			<div style="float:left;width:50%">
+				<strong>Développeur</strong>
+				<p>Fuite mémoire</p>
+			</div>
+			<div style="float:right;width:50%">
+				<strong>Opérationnel</strong>
+				<p>Serveur pas assez puissant</p>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>DevOps</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<img src="pictures/devops.png" />
+				<p><strong>Développeur</strong> + <strong>Opérationnel</strong></p>
+			</div>
+			<div style="float:right;width:50%">
+				<ul>
+					<li>Connait le language</li>
+					<li>Est sensibilité <strong>aux problématiques opérationnelles</strong></li>
+					<li>Fluidifie les mises en production</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Problématiques opérationnelles</h2>
+		<div class="double">
+			<ul>
+				<li><em>Installation</em></li>
+				<li>Maintenance</li>
+				<li>Supervision</li>
+				<li>Alerting</li>
+				<li>Résilience</li>
+				<li><em>Automatisation</em></li>
+				<li>Disponibilité</li>
+				<li>Etc.</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Installation</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<p><strong>Provisionning</strong></p>
+				<img src="pictures/berceau.png" />
+			</div>
+			<div style="float:right;width:50%">
+				<p><strong>Déploiement</strong></p>
+				<img src="pictures/bébé.png" />
+			</div>
+			<div class="clear: both"></div>
+			<figure>
+				<blockquote>
+					<p>Le provisionning est au berceau ce que le déploiement est au bébé</p>
+				</blockquote>
+				<figcaption>Olivier Girardot</figcaption>
+			</figure>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Automatisation</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<p><strong>Développeur</strong></p>
+				<ul>
+					<li>Maven</li>
+					<li>Nexus</li>
+					<li>Make</li>
+					<li>Gulp</li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%">
+				<p><strong>Operationnel</strong></p>
+				<ul>
+					<li>Chef</li>
+					<li>Puppet</li>
+					<li>Ansible</li>
+				</ul>
+				<p class="note">Infrastructure as Code</p>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Ansible</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<ul>
+					<li>Python</li>
+					<li>SSH</li>
+					<li>YAML</li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%">
+				<img src="pictures/ansible.png" />
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<div style="float:left; width:33%;">
+				<p><strong>Machines</strong></p>
+				<ul>
+					<li>Inventory</li>
+					<li>Hosts</li>
+				</ul>
+			</div>
+			<div style="float:left; width:33%;">
+				<p><strong>Etats</strong></p>
+				<ul>
+					<li>Tasks</li>
+					<li>Handlers</li>
+				</ul>
+			</div>
+			<div style="float:left; width:33%;">
+				<p><strong>Glue</strong></p>
+				<ul>
+					<li>Templates</li>
+					<li>Variables</li>
+				</ul>
+			</div>
+		</div>
+		<p style="text-align: center;" class="note">Et c'est tout !</p>
+	</section>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
