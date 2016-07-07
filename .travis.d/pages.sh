@@ -2,7 +2,7 @@
 
 main()
 {
-  declare s="${1}"
+  declare s="${1:-.}"
 
   # We copy everything into another folder
   declare d="$( mktemp -d )/gh-pages"
