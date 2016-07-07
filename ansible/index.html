@@ -9,178 +9,453 @@
 </head>
 <body class="shower list">
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>DevOps</h1>
+		<p>Qu'est-ce qu'un DevOps et comment Ansible peut aider... </p>
 	</header>
-	<section class="slide" id="cover">
-		<h2>Shower Presentation Engine</h2>
-		<p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
-		<img src="pictures/cover.jpg" alt="" class="cover">
-		<!--
-			To apply styles to the certain slides
-			set slide ID to get needed elements
-			-->
-		<style>
-			#cover h2 {
-				margin:30px 0 0;
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
-				}
-			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
-				}
-				#cover p a {
-					color:#FFF;
-					}
-		</style>
+	<section class="slide">
+		<h2 class="shout shrink">Introduction à Ansible</h2>
 	</section>
 	<section class="slide">
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>Works in all modern browsers</li>
-			<li>Themes are separated from engine</li>
-			<li>Modular and extensible</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</section>
-	<section class="slide">
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</section>
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-	</section>
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
+		<h2>Rôle</h2>
+		<div>
+			<div style="float:left;width:50%">
+				<strong>Développeur</strong>
 				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
+					<li>Produire un WAR applicatif</li>
+					<li>Produire un <code>.egg</code></li>
+					<li>Produire un RPM</li>
 				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
+			</div>
+			<div style="float:right;width:50%">
+				<strong>Opérationnel</strong>
+				<ul>
+					<li>Déployer le WAR dans Tomcat</li>
+					<li>Installer le <code>.egg</code> avec <code>pip</code></li>
+					<li>Installer le RPM avec <code>yum</code></li>
+				</ul>
+			</div>
+		</div>
 	</section>
 	<section class="slide">
-		<h2>Serious citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</section>
-	<section class="slide">
-		<h2>Code samples</h2>
+		<h2>Résponsabilité</h2>
 		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
+			<code><mark>java.lang.OutOfMemoryError: Java heap space</mark></code>
+			<code>    at java.nio.HeapIntBuffer.&lt;init&gt;(Unknown Source)</code>
+			<code>    at java.nio.IntBuffer.allocate(Unknown Source)</code>
+			<code>    ...</code>
 		</pre>
+		<div>
+			<div style="float:left;width:50%">
+				<strong>Développeur</strong>
+				<p>Fuite mémoire</p>
+			</div>
+			<div style="float:right;width:50%">
+				<strong>Opérationnel</strong>
+				<p>Serveur pas assez puissant</p>
+			</div>
+		</div>
 	</section>
 	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="" class="cover">
-		<style>
-			#picture h2 {
-				color:#FFF;
-				}
-		</style>
+		<h2>Résponsabilité</h2>
+		<pre>
+			<code><mark>java.io.IOException: There is not enough space on the disk</mark></code>
+			<code>    at java.io.FileOutputStream.writeBytes(Native Method)</code>
+			<code>    at java.io.FileOutputStream.write(Unknown Source)</code>
+			<code>    ...</code>
+		</pre>
+		<div>
+			<div style="float:left;width:50%">
+				<strong>Développeur</strong>
+				<p>Fichiers de log trop verbeux</p>
+			</div>
+			<div style="float:right;width:50%">
+				<strong>Opérationnel</strong>
+				<p>Disque-dur trop petit</p>
+			</div>
+		</div>
 	</section>
 	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
+		<div style="text-align: center;">
+			<img src="pictures/ping-pong.png" style="width:50%; height:50%; "  />
+		</div>
 	</section>
 	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
+		<h2>DevOps</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<img src="pictures/devops.png" style="width:75%; height: 75%" />
+				<p><strong>Développeur</strong> + <strong>Opérationnel</strong></p>
+			</div>
+			<div style="float:right;width:50%">
+				<ul>
+					<li>Est <em>un développeur</em></li>
+					<li>Est sensibilité <em>aux problématiques opérationnelles</em></li>
+					<li><em>Fluidifie</em> les mises en production</li>
+				</ul>
+			</div>
+		</div>
 	</section>
-	<section class="slide grid">
-		<h2>All nicely aligned to grid</h2>
+	<section class="slide">
+		<h2>Problématiques opérationnelles</h2>
+		<div class="double">
+			<ul>
+				<li><em>Installation</em></li>
+				<li>Maintenance</li>
+				<li>Supervision</li>
+				<li>Alerting</li>
+				<li>Résilience</li>
+				<li><em>Automatisation</em></li>
+				<li>Disponibilité</li>
+				<li>Etc.</li>
+			</ul>
+		</div>
 	</section>
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size:100px
-				}
-			#see-more img {
-				width:0.72em;
-				height:0.72em;
-				}
-		</style>
+	<section class="slide">
+		<h2>Installation</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<p><strong>Provisionning</strong></p>
+				<img src="pictures/berceau.jpg" style="width:50%; height:50%;" />
+			</div>
+			<div style="float:right;width:50%">
+				<p><strong>Déploiement</strong></p>
+				<img src="pictures/bébé.jpg" style="width:75%; height:75%;" />
+			</div>
+			<div class="clear: both"></div>
+		</div>
 	</section>
-	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</p>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
-	<div class="progress"></div>
+	<section class="slide">
+		<h2>Automatisation</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<p><strong>Développeur</strong></p>
+				<ul>
+					<li>Maven</li>
+					<li>Nexus</li>
+					<li>Make</li>
+					<li>Gulp</li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%">
+				<p><strong>Operationnel</strong></p>
+				<ul>
+					<li>Bash</li>
+					<li>Chef</li>
+					<li>Puppet</li>
+					<li><em>Ansible</em></li>
+				</ul>
+				<p class="note">Infrastructure as Code</p>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Ansible</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<ul>
+					<li>Python</li>
+					<li>SSH</li>
+					<li>YAML</li>
+					<li><em>Idempotence</em></li>
+					<li><em>États finaux</em></li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%">
+				<img src="pictures/ansible.png" style="height:75%;width:75%" />
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<div style="float:left; width:33%;">
+				<p><strong>Machines</strong></p>
+				<ul>
+					<li>Inventory</li>
+					<li>Hosts</li>
+				</ul>
+			</div>
+			<div style="float:left; width:33%;">
+				<p><strong>Etats</strong></p>
+				<ul>
+					<li>Tasks</li>
+					<li>Handlers</li>
+					<li>Roles</li>
+				</ul>
+			</div>
+			<div style="float:left; width:33%;">
+				<p><strong>Glue</strong></p>
+				<ul>
+					<li>Templates</li>
+					<li>Variables</li>
+				</ul>
+			</div>
+		</div>
+		<p style="text-align: center;" class="note">Et c'est tout !</p>
+	</section>
+	<section class="slide">
+		<h2>Inventory</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<p><strong>Recette</strong></p>
+				<ul>
+					<li><code>pan.starclay.fr</code></li>
+					<li><code>daphnis.starclay.fr</code></li>
+					<li><code>atlas.starclay.fr</code></li>
+				</ul>
+				<p style="text-align: left;" class="note">&frac12; production</p>
+			</div>
+			<div style="float:left; width:50%;">
+				<p><strong>Production</strong></p>
+				<ul>
+					<li><code>metis.starclay.fr</code></li>
+					<li><code>adrastee.starclay.fr</code></li>
+					<li><code>amalthee.starclay.fr</code></li>
+					<li><code>thebee.starclay.fr</code></li>
+					<li><code>europe.starclay.fr</code></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Inventory</h2>
+		<pre>
+			<code>[storage]</code>
+			<code>pan</code>
+			<code>[site]</code>
+			<code>daphis</code>
+			<code>[reverse-proxy]</code>
+			<code>atlas</code>
+		</pre>
+		<p style="text-align: left;" class="note"><code>recette.ini</code></p>
+	</section>
+	<section class="slide">
+		<h2>Inventory</h2>
+		<div style="float:left; width:50%;">
+			<pre style="font-size:75%">
+				<code>[storage]</code>
+				<code>pan</code>
+				<code>[site]</code>
+				<code>daphis</code>
+				<code>[reverse-proxy]</code>
+				<code>atlas</code>
+			</pre>
+			<p style="text-align: left;" class="note"><code>recette.ini</code></p>
+		</div>
+		<div style="float:left; width:50%;">
+			<pre style="font-size:75%">
+				<code>[storage]</code>
+				<code>metis</code>
+				<code>adrastee</code>
+				<code>[site]</code>
+				<code>thebee</code>
+				<code>amalthee</code>
+				<code>[reverse-proxy]</code>
+				<code>europe</code>
+			</pre>
+			<p style="text-align: left;" class="note"><code>production.ini</code></p>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Tasks</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<ul>
+					<li>Etat final</li>
+					<li>Idempotence</li>
+					<li>Module</li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%">
+				<pre style="font-size:100%">
+					<code>hosts: storage</code>
+					<code>tasks: </code>
+					<code>- name: install PostgreSQL</code>
+					<code>  yum: </code>
+					<code>    name="postgresql"</code>
+					<code>    <mark>state=installed</mark></code>
+				</pre>
+				<p style="text-align: left;" class="note"><code>site.yml</code></p>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Tasks</h2>
+		<p><strong>Modules de base</strong></p>
+		<div class="double">
+			<ul>
+				<li>yum</li>
+				<li>copy</li>
+				<li>template</li>
+				<li>lineinfile</li>
+				<li>fetch</li>
+				<li>unarchive</li>
+				<li>service</li>
+				<li>...</li>
+			</ul>
+		</div>
+		<p style="text-align: left;" class="note"><a href="http://docs.ansible.com/ansible/list_of_all_modules.html">http://docs.ansible.com/ansible/list_of_all_modules.html</a></p>
+	</section>
+	<section class="slide">
+		<h2>Tasks</h2>
+		<p><strong>Modules avancés</strong></p>
+		<div class="double">
+			<ul>
+				<li>docker_login</li>
+				<li>lxc_container</li>
+				<li>potgresql_user</li>
+				<li>gitlab_release</li>
+				<li>slack</li>
+				<li>zfs</li>
+				<li>proxmox</li>
+				<li>...</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Handlers</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<pre style="font-size:75%">
+					<code>tasks: </code>
+					<code>- name: configure NGINX</code>
+					<code>  copy: </code>
+					<code>    src="files/nginx.conf"</code>
+					<code>    dest="/etc/nginx.conf"</code>
+					<code>  <mark>notify: </mark></code>
+					<code>  <mark>- restart NGINX</mark></code>
+				</pre>
+				<ul>
+					<li>Invoqué uniquement si <em>l'état</em> a changé</li>
+				</ul>
+			</div>
+			<div style="float:left; width:50%;">
+				<pre style="font-size:75%">
+					<code>handlers: </code>
+					<code><mark>- name: restart NGINX</mark></code>
+					<code><mark> service: name=nginx state=restarted</mark></code>
+					<code>- name: alert team</code>
+					<code> local_action: </code>
+					<code>   module: slack</code>
+					<code>   msg: "Something went wrong! "</code>
+				</pre>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Roles</h2>
+		<div>
+			<div style="float:left; width:66%;">
+				<pre style="font-size:100%">
+					<code>hosts: storage</code>
+					<code>roles:</code>
+					<code>- "elastic-search"</code>
+					<code>- { role: "postgresql", </code>
+					<code>    postgresql_version: "9.2" }</code>
+				</pre>
+			</div>
+			<div style="float:left; width:33%;">
+				<ul>
+					<li>Groupement de <em>tasks</em></li>
+					<li>Versionnable</li>
+					<li>ansible-galaxy</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Templates</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<ul>
+					<li>Jinja</li>
+					<li>Variable</li>
+					<li>Surcharge</li>
+				</ul>
+			</div>
+			<div style="float:right; width:50%;">
+				<img src="pictures/jinja2.png" style="" />
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Templates</h2>
+		<div>
+			<div>
+				<pre style="font-size:75%">
+					<code>hosts: role-balancer</code>
+					<code>vars: </code>
+					<code>  site_http_port: 80</code>
+					<code>tasks:</code>
+					<code>- name: configure HAProxy</code>
+					<code>  template:</code>
+					<code>    src="haproxy.cfg.j2"</code>
+					<code>    dest="/etc/haproxy/haproxy.cfg"</code>
+				</pre>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Templates</h2>
+		<div>
+			<div>
+				<pre style="font-size:75%">
+				  <code>frontend site</code>
+				  <code>   balance roundrobin</code>
+				  <code><mark>{% for host in groups["site"] %}</mark></code>
+				  <code>   server {{ hostvars[host]["ansible_hostname"]}} \</code>
+				  <code>     <mark>{{ host }}</mark>:{{ site_http_port }} check</code>
+				  <code>{% endfor %}</code>
+				</pre>
+				<ul>
+					<li>Boucles</li>
+					<li>Formattage</li>
+					<li>Etc.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Utilisation</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<p><strong>Playbook</strong></p>
+				<pre style="font-size:75%">
+				  <code>ansible-playbook \</code>
+				  <code><mark>  -i "inventory.ini" \</mark></code>
+				  <code><mark>  "site.yml" \</mark></code>
+				  <code>  -e site_http_port=8080</code>
+				</pre>
+				<ul>
+					<li>Roles</li>
+					<li>Tâches</li>
+				</ul>
+			</div>
+			<div style="float:left; width:50%;">
+				<p><strong>One-shot</strong></p>
+				<pre style="font-size:75%">
+				  <code>ansible <mark>storage \</mark></code>
+				  <code><mark>  -i "inventory.ini" \</mark></code>
+				  <code><mark>  -m "shell" \<mark></code>
+				  <code>  -a "sudo df -h"</code>
+				</pre>
+				<ul>
+					<li>Usage direct des modules</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2>Où aller à partir de là</h2>
+		<ul>
+			<li><a href="http://docs.ansible.com/">http://docs.ansible.com/</a></li>
+			<li>Ansible Galaxy</li>
+			<li><a href="https://github.com/ebiznext">https://github.com/ebiznext</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Merci</h2>
+	</section>
 	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
-	<!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
 </html>
