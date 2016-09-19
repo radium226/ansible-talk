@@ -1,0 +1,12 @@
+Avant de commencer directement à parler de Docker, il va falloir : 
+ 1. Détailler quelques éléments de langage :
+     a) Hyperviseur
+     b) Machine Virtuelle
+     c) Conteneur
+ 2. Rappeler les deux problèmes que Docker propose de résoudre : 
+     a) Le suivi d'application reposant sur des stacks hétérogènes :
+           i) Machine Learning en Python
+          ii) API en Scala
+         iii) Storage avec Redis
+     b)
+
