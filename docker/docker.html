@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Introduction à Docker</h1>
+		<p>Ou le future de la conteneurisation</p>
+	</header>
+	<section class="slide">
+		<h2 class="shout shrink">Introduction à Docker</h2>
+	</section>
+
+  <!-- Le problème que résoud Docker -->
+
+  <!-- Java + Oracle + PL/SQL -->
+  <section class="slide">
+    <h2>Stacks applicatives</h2>
+    <div>
+      <p><strong>Hier</strong></p>
+      <div style="text-align:center;">
+        <img src="pictures/hier.png" style="width:75%;"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Redis + MongoDB + Elastic Search + Etc. -->
+  <section class="slide">
+    <h2>Stacks applicatives</h2>
+    <div>
+      <p><strong>Aujourd'hui</strong></p>
+      <div style="text-align:center;">
+        <img src="pictures/aujourd_hui.png" style="width:65%;"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <h2>Stacks applicatives</h2>
+    <div>
+      <div style="float:left;width:50%">
+        <p><strong>Hier</strong></p>
+        <div style="text-align:left;">
+          <img src="pictures/monolithe.jpg" style="width:75%;"/>
+        </div>
+      </div>
+      <div style="float:right;width:50%">
+        <p><strong>Aujourd'hui</strong></p>
+        <div style="text-align:left;">
+          <img src="pictures/lego.jpg" style="width:75%;"/>
+        </div>
+      </div>
+      <div class="clear: both"></div>
+    </div>
+  </section>
+
+  <!-- Developpeur :) / Opérationnel :( -->
+  <section class="slide">
+    <h2>Stacks applicatives</h2>
+    <div>
+      <div style="float:left;width:50%">
+        <p><strong>Développeur</strong></p>
+        <img src="pictures/happy.jpg" style="height:100px;" />
+        <ul>
+          <li>Le bon outil pour la bonne tâche</li>
+          <li>Meilleures performances</li>
+          <li>Plus de possibilités</li>
+        </ul>
+      </div>
+      <div style="float:right;width:50%">
+        <p><strong>Opérationnel</strong></p>
+        <img src="pictures/fuuuuu.jpg" style="height:100px;"/>
+        <ul style="font-size:100%;">
+          <li>Nécessité de connaitre de multiples technologies</li>
+          <li>Frustration (instabilités, peu d'outillage, etc.)</li>
+        </ul>
+      </div>
+      <div class="clear: both"></div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div style="text-align: center;">
+      <img src="pictures/ping-pong.png" style="width:50%; height:50%; "  />
+    </div>
+  </section>
+
+  <!-- Problématique DevOps : les développeurs ne se sentent pas concernés par le suivi de leur application une fois en production. Docker est la réponse DevOps-->
+  <section class="slide">
+    <h2>Réponse DevOps</h2>
+    <div>
+      <div style="float:left;width:50%">
+        <p><strong>Docker</strong></p>
+        <ul>
+          <li>Laisse la liberté aux développeurs</li>
+          <li><mark>Unifie le build, le déploiement et le versionning</mark> des applications</li>
+          <li>Simplifie la gestion de la scalabilité des applications</li>
+        </ul>
+      </div>
+      <div style="float:right;width:50%;text-align:right;">
+        <img src="pictures/devops.png" style="width:75%;height:75%;" />
+      </div>
+      <div class="clear: both"></div>
+    </div>
+  </section>
+
+
+  <!-- Docker -->
+  <section class="slide">
+		<h2>Docker</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<ul>
+					<li>Créé par Solomon Hykes à <em>dotCloud</em></li>
+          <li>Ecrit en Go</li>
+					<li>Possède un large écosystème</li>
+          <li><a href="https://www.docker.com/">https://www.docker.com/</a></li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%;text-align:right;">
+				<img src="pictures/docker.png" style="height:75%;width:75%" />
+			</div>
+		</div>
+	</section>
+
+  <!-- Exemple -->
+  <!-- Vocabulaire -->
+	<section class="slide">
+		<h2>Vocabulaire</h2>
+		<div>
+			<div style="float:left;width:50%">
+				<p><strong>Hyperviseur</strong></p>
+				<ul>
+					<li>Xen</li>
+					<li>ESX</code></li>
+					<li><mark>Proxmox</mark></li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%;text-align:right;">
+				<img src="pictures/hyperviseur.png" style="height:100%;width:100%" />
+			</div>
+			<div class="clear: both"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Vocabulaire</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<p><strong>Machine virtuelle</strong></p>
+				<ul>
+					<li>VMWare</li>
+					<li><mark>VirtualBox</mark></li>
+					<li>Parallel Desktop</li>
+					<li>KVM / Qemu</li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%;text-align:right;">
+				<img src="pictures/machine_virtuelle.png" style="width:100%; height:100%;" />
+			</div>
+			<div class="clear: both"></div>
+		</div>
+	</section>
+
+  <section class="slide">
+		<div>
+			<img src="pictures/deeper.jpg" style="height:100%;width:100%" />
+		</div>
+	</section>
+
+  <section class="slide">
+		<h2>Vocabulaire</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<p><strong>Conteneur</strong></p>
+				<ul>
+					<li>LXC (et LXD)</li>
+					<li>OpenVZ</li>
+					<li><em>Docker</em></li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%;text-align:right;">
+				<img src="pictures/conteneur.png" style="width:100%; height:100%;" />
+			</div>
+			<div class="clear: both"></div>
+		</div>
+	</section>
+
+
+  <!-- Concepts -->
+	<section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<div style="float:left; width:47%;">
+				<p><strong>Image</strong></p>
+				<ul>
+					<li>Base d'un <em>conteneur</em> Docker</li>
+					<li><mark>Liste des modifications</mark> apportées au système de fichier</li>
+					<li>Est décrit à l'aide d'un <em>Dockerfile</em></li>
+					<li><code>class Redis { ... }</code></li>
+				</ul>
+			</div>
+			<div style="float:right;width:47%">
+				<p><strong>Conteneur</strong></p>
+				<ul>
+					<li>Instanciation d'une <em>image</em></li>
+					<li>Possède <mark>un état</mark> (démarée, arrêté, gelée, etc.)</li>
+					<li><code>new Redis();</code></li>
+          <li><mark>Persistance ephémère</mark></li>
+				</ul>
+			</div>
+			<div class="clear: both"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<p><strong>Dockerfile</strong></p>
+			<pre style="font-size:75%">
+				<code>FROM ubuntu:xenial</code>
+				<code>RUN apt-get update &amp;&amp; apt-get install -y apache2 &amp;&amp; apt-get clean &amp;&amp; \</code>
+				<code>	rm -rf /var/lib/apt/lists/*</code>
+				<code>RUN apt-get update &amp;&amp; apt-get install -y php5 libapache2-mod-php5 \</code>
+				<code>	php5-mysql php5-cli &amp;&amp; apt-get clean &amp;&amp; rm -rf /var/lib/apt/lists/*</code>
+				<code>EXPOSE 80</code>
+				<code><mark>CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]</mark></code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<p><strong>Docker Engine</strong></p>
+			<div>
+				<div style="float:left;width:47%">
+					<ul>
+						<li><mark>Construit</mark> une <em>image</em> à partir d'un <em>Dockerfile</em></li>
+						<li><code>docker build -t starclay/apache-php .</code></li>
+					</ul>
+				</div>
+				<div style="float:right;width:47%">
+					<ul>
+						<li><mark>Instancie</mark> une <em>image</em> comme <em>conteneur</em></li>
+						<li><code>docker run -it starclay/apache-php:latest</code></li>
+					</ul>
+				</div>
+				<div class="clear: both"></div>
+			</div>
+		</div>
+	</section>
+
+  <section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<p><strong>Docker Compose</strong></p>
+      <ul>
+        <li>Dans <em>Dockerfile</em>, <code>CMD</code> (ou <code>ENTRYPOINT</code>) lance un seul process</li>
+        <li>Une image par process (MySQL, Java, etc.)</li>
+        <li><mark>Orchestration</mark> de plusieurs conteneurs</li>
+        <li><code>docker-compose up</code></li>
+      </ul>
+		</div>
+	</section>
+
+  <section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<div>
+        <p><strong>Docker Registry</strong></p>
+				<ul>
+					<li>Registre des <mark>images Docker disponibles</mark></li>
+					<li><em>Docker Hub</em>
+						 <ul>
+							 <li><a href="https://hub.docker.com/explore/">https://hub.docker.com/explore/</a></li>
+							 <li>Open Source</li>
+						 </ul>
+					</li>
+					<li>Possibilité de déployer un <mark>registre privé</mark> d'images Docker</li>
+					<li>Support du <mark>versionning des images</mark></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+  <section class="slide">
+    <h2>Où aller à partir de là</h2>
+    <ul>
+      <li>Kubernetes</li>
+      <li>Docker Swarm</li>
+    </ul>
+  </section>
+
+
+
+	<section class="slide">
+		<h2 class="shout shrink">Merci</h2>
+	</section>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
