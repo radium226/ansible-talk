@@ -1,0 +1,15 @@
+version: "2"
+services:
+  postgres:
+    build: "postgres"
+    volumes:
+    - "./postgres-data:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_USER: "demo"
+      POSTGRES_PASSWORD: "demo"
+  node:
+    build: "node"
+    links:
+    - "postgres:postgres"
+    ports:
+    - "3000:3000"
