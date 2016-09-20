@@ -49,24 +49,23 @@ const database = pgp({
 });
 
 function createTableIfNotExists(client) {
-  return client.one("SELECT EXISTS ( SELECT 1 FROM information_schema.tables t WHERE t.table_schema = current_schema() AND t.table_name = $1 )", "collaborators")
-    .then((result) => {
-      if (!result.exists) {
-        return client.none("CREATE TABLE collaborators(first_name TEXT NOT NULL, last_name TEXT NOT NULL)").then(() => { return true; });
-      } else {
-        return false;
-      }
-    })
-    .then((tableCreated) => {
-      if (tableCreated) {
-        return database.task((client) => {
-          return client.none("INSERT INTO collaborators(first_name, last_name) VALUES ($1, $2)", ["Xavier", "Pontoireau"])
-            .then(() => { return client.none("INSERT INTO collaborators(first_name, last_name) VALUES ($1, $2)", ["Hugues", "Pringault"]); });
-          }).then(() => { return true; });
+  return client.tx(t=>{
+    return t.oneOrNone("SELECT 1 FROM information_schema.tables t WHERE t.table_schema = current_schema() AND t.table_name = $1", "collaborators", r=>!!r)
+      .then(result=>{
+            return result || t.none("CREATE TABLE collaborators(first_name TEXT NOT NULL, last_name TEXT NOT NULL)").then(()=>true);
+         })
+      .then(tableCreated => {
+        if (tableCreated) {
+          return t.batch([
+               t.none("INSERT INTO collaborators(first_name, last_name) VALUES ($1, $2)", ["Xavier", "Pontoireau"]),
+               t.none("INSERT INTO collaborators(first_name, last_name) VALUES ($1, $2)", ["Hugues", "Pringault"])   
+            ])
+            .then(() => true;);
       } else {
         return false;
       }
     });
+  });
 }
 
 function listCollaborators(request, response) {
