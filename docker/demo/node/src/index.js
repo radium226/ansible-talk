@@ -58,9 +58,9 @@ function createTableIfNotExists(client) {
         if (tableCreated) {
           return t.batch([
                t.none("INSERT INTO collaborators(first_name, last_name) VALUES ($1, $2)", ["Xavier", "Pontoireau"]),
-               t.none("INSERT INTO collaborators(first_name, last_name) VALUES ($1, $2)", ["Hugues", "Pringault"])   
+               t.none("INSERT INTO collaborators(first_name, last_name) VALUES ($1, $2)", ["Hugues", "Pringault"])
             ])
-            .then(() => true;);
+            .then(() => true);
       } else {
         return false;
       }
