@@ -17,6 +17,9 @@
 	</section>
 
   <!-- Le problème que résoud Docker -->
+	<section class="slide">
+		<h2 class="shout" style="font-size:250%;">Quel problème résout Docker ? </h2>
+	</section>
 
   <!-- Java + Oracle + PL/SQL -->
   <section class="slide">
@@ -109,16 +112,21 @@
     </div>
   </section>
 
-
   <!-- Docker -->
   <section class="slide">
 		<h2>Docker</h2>
 		<div>
 			<div style="float:left; width:50%;">
 				<ul>
-					<li>Créé par Solomon Hykes à <em>dotCloud</em></li>
+					<li>Créé par Solomon Hykes à <em>dotCloud</em> en 2013</li>
           <li>Ecrit en Go</li>
-					<li>Possède un large écosystème</li>
+					<li>Possède un large écosystème :
+						<ul>
+							<li>CoreOS</li>
+							<li>Kubernete</li>
+							<li>Etc.</li>
+						</ul>
+					</li>
           <li><a href="https://www.docker.com/">https://www.docker.com/</a></li>
 				</ul>
 			</div>
@@ -129,6 +137,10 @@
 	</section>
 
   <!-- Exemple -->
+	<section class="slide">
+		<h2 class="shout" style="font-size:250%;">Petite clarification technique... </h2>
+	</section>
+
   <!-- Vocabulaire -->
 	<section class="slide">
 		<h2>Vocabulaire</h2>
@@ -181,7 +193,7 @@
 				<ul>
 					<li>LXC (et LXD)</li>
 					<li>OpenVZ</li>
-					<li><em>Docker</em></li>
+					<li><mark>Docker</mark></li>
 				</ul>
 			</div>
 			<div style="float:right;width:50%;text-align:right;">
@@ -192,7 +204,11 @@
 	</section>
 
 
-  <!-- Concepts -->
+  <section class="slide">
+		<h2 class="shout" style="font-size:250%;">Les concepts de base de Docker</h2>
+	</section>
+
+	<!-- Concepts -->
 	<section class="slide">
 		<h2>Concepts</h2>
 		<div>
@@ -208,7 +224,7 @@
 			<div style="float:right;width:47%">
 				<p><strong>Conteneur</strong></p>
 				<ul>
-					<li>Instanciation d'une <em>image</em></li>
+					<li>Instancie d'une <em>image</em></li>
 					<li>Possède <mark>un état</mark> (démarée, arrêté, gelée, etc.)</li>
 					<li><code>new Redis();</code></li>
           <li><mark>Persistance ephémère</mark></li>
@@ -269,7 +285,7 @@
 		</div>
 	</section>
 
-  <section class="slide">
+	<section class="slide">
 		<h2>Concepts</h2>
 		<div>
 			<div>
@@ -289,19 +305,50 @@
 		</div>
 	</section>
 
+	<section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<div>
+        <p><strong>Volumes</strong></p>
+				<ul>
+					<li>Permet de persister les données</li>
+					<li>Plusieurs moyens :
+						<ul>
+							<li>Docker Volume</li>
+							<li>Mount d'un dossier du host</li>
+							<li><em>Storage Driver</em></li>
+						<ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
+	<section class="slide">
+		<h2 class="shout" style="font-size:250%;">Demo</h2>
+	</section>
 
+	<section class="slide">
+		<h2 class="shout" style="font-size:250%;">Et maintenant ? </h2>
+	</section>
 
-
-
-
-
+	<section class="slide">
+		<h2>Désavantages</h2>
+		<div>
+			<ul>
+				<li>Jeunesse du projet (<em>breaking changes</em>, etc.)</li>
+				<li>Peu de bonnes pratiques</li>
+				<li>Communauté agitée (<em>Docker Swarm</em>, etc.)</li>
+			</ul>
+		</div>
+	</section>
 
   <section class="slide">
-    <h2>Où aller à partir de là</h2>
+    <h2>L'écosystème</h2>
     <ul>
       <li>Kubernetes</li>
       <li>Docker Swarm</li>
+      <li>CoreOS</li>
     </ul>
   </section>
 
