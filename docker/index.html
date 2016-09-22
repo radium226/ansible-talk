@@ -215,6 +215,7 @@
 			<div style="float:left; width:47%;">
 				<p><strong>Image</strong></p>
 				<ul>
+					<li>Se base sur une <mark><em>image</em> parente</mark></li>
 					<li>Base d'un <em>conteneur</em> Docker</li>
 					<li><mark>Liste des modifications</mark> apportées au système de fichier</li>
 					<li>Est décrit à l'aide d'un <em>Dockerfile</em></li>
@@ -237,9 +238,46 @@
 	<section class="slide">
 		<h2>Concepts</h2>
 		<div>
+			<div>
+        <p><strong>Volumes</strong></p>
+				<ul>
+					<li>Permet de persister les données</li>
+					<li>Plusieurs moyens :
+						<ul>
+							<li>Docker Volume</li>
+							<li>Mount d'un dossier du host (<code>mount --bind</code>)</li>
+							<li><em>Storage Driver</em> (Ceph, GlusterFS, etc.)</li>
+						<ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Concepts</h2>
+		<div>
+			<div style="float:left; width:50%;">
+				<ul>
+					<li>Isolation des ressources</li>
+					<li><em>Image</em> &harr; Executable + Dépendences</li>
+					<li><em>Conteneur</em> &harr; Process + Contrôle</li>
+					<li><em>Volume</em> &harr; Device</li>
+				</ul>
+			</div>
+			<div style="float:right;width:50%;text-align:right;">
+				<img src="pictures/container.jpg" style="width:100%; height:100%;" />
+			</div>
+			<div class="clear: both"></div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Concepts</h2>
+		<div>
 			<p><strong>Dockerfile</strong></p>
 			<pre style="font-size:75%">
-				<code>FROM ubuntu:xenial</code>
+				<code><mark>FROM ubuntu:xenial</mark></code>
 				<code>RUN apt-get update &amp;&amp; apt-get install -y apache2 &amp;&amp; apt-get clean &amp;&amp; \</code>
 				<code>	rm -rf /var/lib/apt/lists/*</code>
 				<code>RUN apt-get update &amp;&amp; apt-get install -y php5 libapache2-mod-php5 \</code>
@@ -306,25 +344,6 @@
 	</section>
 
 	<section class="slide">
-		<h2>Concepts</h2>
-		<div>
-			<div>
-        <p><strong>Volumes</strong></p>
-				<ul>
-					<li>Permet de persister les données</li>
-					<li>Plusieurs moyens :
-						<ul>
-							<li>Docker Volume</li>
-							<li>Mount d'un dossier du host</li>
-							<li><em>Storage Driver</em></li>
-						<ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section>
-
-	<section class="slide">
 		<h2 class="shout" style="font-size:250%;">Demo</h2>
 	</section>
 
@@ -351,8 +370,6 @@
       <li>CoreOS</li>
     </ul>
   </section>
-
-
 
 	<section class="slide">
 		<h2 class="shout shrink">Merci</h2>
