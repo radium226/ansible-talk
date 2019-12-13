@@ -6,3 +6,9 @@ SHELL=/bin/bash
 
 include make/slides.mk
 include make/samples.mk
+
+.PHONY: clean
+clean: clean-slides
+
+.PHONY: build
+build: build-slides
