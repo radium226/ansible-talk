@@ -31,7 +31,7 @@ $(SLIDES_BUILD_FOLDER)/.extract-revealjs: $(SLIDES_BUILD_FOLDER)/revealjs.tar.gz
 .PHONY: patch-revealjs
 patch-revealjs: $(SLIDES_BUILD_FOLDER)/.patch-revealjs
 
-$(SLIDES_BUILD_FOLDER)/.patch-revealjs: $(SLIDES_BUILD_FOLDER)/.extract-revealjs
+$(SLIDES_BUILD_FOLDER)/.patch-revealjs: $(SLIDES_BUILD_FOLDER)/.extract-revealjs "$(SLIDES_FOLDER)/index.html"
 	find "$(SLIDES_FOLDER)/patches" -name "*.patch" -print0 | xargs -0 -I {} \
     patch \
 			--strip=2 \
